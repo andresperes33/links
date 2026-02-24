@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>André da Silva Peres | Links</title>
+  <meta name="description"
+    content="Acesse os produtos e canais de André da Silva Peres — site oficial e grupo no Telegram." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #0a0a0f;
+      --surface: rgba(255, 255, 255, 0.04);
+      --surface-hover: rgba(255, 255, 255, 0.08);
+      --border: rgba(255, 255, 255, 0.08);
+      --border-hover: rgba(255, 255, 255, 0.2);
+      --accent1: #7c3aed;
+      --accent2: #06b6d4;
+      --accent3: #f59e0b;
+      --text-primary: #f1f5f9;
+      --text-secondary: #94a3b8;
+      --glow1: rgba(124, 58, 237, 0.35);
+      --glow2: rgba(6, 182, 212, 0.25);
+    }
+
+    html,
+    body {
+      min-height: 100vh;
+      font-family: 'Outfit', sans-serif;
+      background-color: var(--bg);
+      color: var(--text-primary);
+      overflow-x: hidden;
+    }
+
+    /* ---- Background animated blobs ---- */
+    .bg-blobs {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(90px);
+      opacity: 0.45;
+      animation: floatBlob 14s ease-in-out infinite alternate;
+    }
+
+    .blob-1 {
+      width: 520px;
+      height: 520px;
+      background: radial-gradient(circle, #7c3aed, transparent 70%);
+      top: -160px;
+      left: -160px;
+      animation-duration: 14s;
+    }
+
+    .blob-2 {
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, #06b6d4, transparent 70%);
+      bottom: -120px;
+      right: -120px;
+      animation-duration: 18s;
+      animation-delay: -5s;
+    }
+
+    .blob-3 {
+      width: 280px;
+      height: 280px;
+      background: radial-gradient(circle, #f59e0b, transparent 70%);
+      top: 50%;
+      left: 55%;
+      opacity: 0.2;
+      animation-duration: 22s;
+      animation-delay: -9s;
+    }
+
+    @keyframes floatBlob {
+      0% {
+        transform: translate(0, 0) scale(1);
+      }
+
+      50% {
+        transform: translate(30px, 20px) scale(1.07);
+      }
+
+      100% {
+        transform: translate(-20px, 40px) scale(0.95);
+      }
+    }
+
+    /* ---- Noise texture overlay ---- */
+    .noise {
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      opacity: 0.035;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      background-size: 200px;
+    }
+
+    /* ---- Main layout ---- */
+    .wrapper {
+      position: relative;
+      z-index: 2;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 480px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    /* ---- Avatar with photo ---- */
+    .avatar-wrap {
+      position: relative;
+      margin-bottom: 28px;
+    }
+
+    .avatar-ring {
+      position: absolute;
+      inset: -5px;
+      border-radius: 50%;
+      background: conic-gradient(from 0deg, #1a0000, #c0392b, #ff1e1e, #8b0000, #1a0000);
+      animation: spinRing 6s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes spinRing {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .avatar-inner {
+      position: relative;
+      z-index: 1;
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: none;
+      overflow: hidden;
+    }
+
+    .avatar-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    /* ---- Name & bio ---- */
+    .profile-name {
+      font-size: 1.65rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      text-align: center;
+      background: linear-gradient(90deg, #e2e8f0, #a78bfa, #38bdf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 10px;
+    }
+
+    .profile-bio {
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: var(--text-secondary);
+      text-align: center;
+      max-width: 340px;
+      line-height: 1.6;
+      margin-bottom: 44px;
+    }
+
+    /* ---- Divider ---- */
+    .divider {
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(90deg, #7c3aed, #06b6d4);
+      border-radius: 99px;
+      margin-bottom: 36px;
+      opacity: 0.7;
+    }
+
+    /* ---- Link buttons ---- */
+    .links-list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .link-btn {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      width: 100%;
+      padding: 18px 24px;
+      border-radius: 18px;
+      text-decoration: none;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: transform 0.22s cubic-bezier(.34, 1.56, .64, 1),
+        background 0.22s ease,
+        border-color 0.22s ease,
+        box-shadow 0.22s ease;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .link-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .link-btn:hover {
+      transform: translateY(-4px) scale(1.015);
+      background: var(--surface-hover);
+      border-color: var(--border-hover);
+    }
+
+    /* Site button */
+    .btn-site {
+      --btn-glow: rgba(124, 58, 237, 0.4);
+    }
+
+    .btn-site:hover {
+      box-shadow: 0 8px 40px var(--btn-glow), 0 0 0 1px rgba(124, 58, 237, 0.3);
+    }
+
+    .btn-site .icon-wrap {
+      background: linear-gradient(135deg, #7c3aed, #a855f7);
+    }
+
+    /* Telegram button */
+    .btn-telegram {
+      --btn-glow: rgba(6, 182, 212, 0.4);
+    }
+
+    .btn-telegram:hover {
+      box-shadow: 0 8px 40px var(--btn-glow), 0 0 0 1px rgba(6, 182, 212, 0.3);
+    }
+
+    .btn-telegram .icon-wrap {
+      background: linear-gradient(135deg, #0088cc, #06b6d4);
+    }
+
+    /* Icon wrap */
+    .icon-wrap {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: transform 0.22s ease;
+    }
+
+    .link-btn:hover .icon-wrap {
+      transform: scale(1.1) rotate(-4deg);
+    }
+
+    .icon-wrap svg {
+      width: 22px;
+      height: 22px;
+      fill: #fff;
+    }
+
+    .btn-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .btn-label {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #f1f5f9;
+    }
+
+    .btn-sublabel {
+      font-size: 0.78rem;
+      font-weight: 400;
+      color: var(--text-secondary);
+    }
+
+    .btn-arrow {
+      margin-left: auto;
+      opacity: 0.35;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      flex-shrink: 0;
+    }
+
+    .link-btn:hover .btn-arrow {
+      opacity: 0.8;
+      transform: translateX(4px);
+    }
+
+    /* ---- Badge / tag ---- */
+    .badge {
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 3px 8px;
+      border-radius: 99px;
+      background: linear-gradient(90deg, #7c3aed, #06b6d4);
+      color: #fff;
+      opacity: 0;
+      transform: translateY(-4px);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    .link-btn:hover .badge {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ---- Pulse dot ---- */
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #22c55e;
+      display: inline-block;
+      margin-right: 2px;
+      position: relative;
+    }
+
+    .pulse-dot::after {
+      content: '';
+      position: absolute;
+      inset: -3px;
+      border-radius: 50%;
+      background: rgba(34, 197, 94, 0.4);
+      animation: pulse 1.8s ease-out infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        opacity: 0.8;
+      }
+
+      100% {
+        transform: scale(2.5);
+        opacity: 0;
+      }
+    }
+
+    /* ---- Status bar ---- */
+    .status-bar {
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      color: #4ade80;
+      font-weight: 500;
+    }
+
+    /* ---- Footer ---- */
+    .footer {
+      margin-top: 52px;
+      font-size: 0.75rem;
+      color: rgba(148, 163, 184, 0.45);
+      text-align: center;
+      letter-spacing: 0.04em;
+    }
+
+    /* ---- Entrance animation ---- */
+    .card>* {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.55s cubic-bezier(.22, 1, .36, 1) forwards;
+    }
+
+    .avatar-wrap {
+      animation-delay: 0.05s;
+    }
+
+    .profile-name {
+      animation-delay: 0.12s;
+    }
+
+    .profile-bio {
+      animation-delay: 0.18s;
+    }
+
+    .divider {
+      animation-delay: 0.24s;
+    }
+
+    .links-list {
+      animation-delay: 0.30s;
+    }
+
+    .status-bar {
+      animation-delay: 0.36s;
+    }
+
+    .footer {
+      animation-delay: 0.42s;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 520px) {
+      .profile-name {
+        font-size: 1.35rem;
+      }
+
+      .link-btn {
+        padding: 16px 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Background -->
+  <div class="bg-blobs" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- Main content -->
+  <main class="wrapper">
+    <div class="card">
+
+      <!-- Avatar com foto -->
+      <div class="avatar-wrap">
+        <div class="avatar-ring" aria-hidden="true"></div>
+        <div class="avatar-inner">
+          <img src="media/andre.png" alt="Foto de André da Silva Peres" />
+        </div>
+      </div>
+
+      <!-- Nome -->
+      <h1 class="profile-name">André da Silva Peres</h1>
+
+      <!-- Bio -->
+      <p class="profile-bio">
+        Acesse meus produtos e canais exclusivos abaixo 👇
+      </p>
+
+      <div class="divider"></div>
+
+      <!-- Botões de link -->
+      <nav class="links-list" aria-label="Links de André da Silva Peres">
+
+        <!-- Agente Prime -->
+        <a id="link-site" href="https://www.agenteprime.cloud" target="_blank" rel="noopener noreferrer"
+          class="link-btn btn-site" aria-label="Acessar o Agente Prime">
+          <div class="icon-wrap">
+            <!-- Robot / AI icon -->
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path
+                d="M12 2a2 2 0 0 1 2 2v1h3a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V8a3 3 0 0 1 3-3h3V4a2 2 0 0 1 2-2zm0 2v1h-2V4h2zm-5 5v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm2 2h2v2H9v-2zm6 0h2v2h-2v-2zm-4 4h2v2h-2v-2z" />
+            </svg>
+          </div>
+          <div class="btn-text">
+            <span class="btn-label">🤖 Agente Prime</span>
+            <span class="btn-sublabel">Agente financeiro &amp; administrador inteligente</span>
+          </div>
+          <svg class="btn-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+          <span class="badge">Acesse</span>
+        </a>
+
+        <!-- Telegram Ofertas -->
+        <a id="link-telegram" href="https://t.me/andreindica33" target="_blank" rel="noopener noreferrer"
+          class="link-btn btn-telegram" aria-label="Entrar no grupo de ofertas do Telegram">
+          <div class="icon-wrap">
+            <!-- Telegram icon -->
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path
+                d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.26 13.47l-2.969-.924c-.645-.204-.657-.645.136-.953l11.57-4.461c.537-.194 1.006.131.897.089z" />
+            </svg>
+          </div>
+          <div class="btn-text">
+            <span class="btn-label">✈️ Grupo de Ofertas</span>
+            <span class="btn-sublabel">Promoções automáticas no Telegram 🔥</span>
+          </div>
+          <svg class="btn-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+          <span class="badge">Entrar</span>
+        </a>
+
+      </nav>
+
+      <!-- Status online -->
+      <div class="status-bar" aria-label="Status: online">
+        <span class="pulse-dot"></span>
+        Online agora
+      </div>
+
+      <!-- Footer -->
+      <footer class="footer">
+        © 2026 André da Silva Peres · Todos os direitos reservados
+      </footer>
+
+    </div>
+  </main>
+
+</body>
+
+</html>
