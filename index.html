@@ -182,11 +182,40 @@
       font-weight: 700;
       letter-spacing: -0.5px;
       text-align: center;
+      margin-bottom: 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .profile-name .name-text {
       background: linear-gradient(90deg, #e2e8f0, #a78bfa, #38bdf8);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      margin-bottom: 10px;
+    }
+
+    .profile-name .cursor {
+      display: inline-block;
+      width: 3px;
+      height: 1.5rem;
+      background: #a78bfa;
+      border-radius: 2px;
+      margin-left: 3px;
+      vertical-align: middle;
+      animation: blink 0.75s step-end infinite;
+    }
+
+    @keyframes blink {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
     }
 
     .profile-bio {
@@ -514,7 +543,8 @@
       </div>
 
       <!-- Nome -->
-      <h1 class="profile-name">André da Silva Peres</h1>
+      <h1 class="profile-name"><span class="name-text" id="typed-name"></span><span class="cursor" id="cursor"></span>
+      </h1>
 
       <!-- Bio -->
       <p class="profile-bio">
@@ -626,6 +656,22 @@
     </div>
   </main>
 
+  <script>
+    (function () {
+      const fullName = 'André da Silva Peres';
+      const el = document.getElementById('typed-name');
+      let i = 0;
+
+      // Aguarda a animação de entrada do card antes de começar a digitar
+      setTimeout(function type() {
+        if (i <= fullName.length) {
+          el.textContent = fullName.slice(0, i);
+          i++;
+          setTimeout(type, 70);
+        }
+      }, 600);
+    })();
+  </script>
 </body>
 
 </html>
