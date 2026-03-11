@@ -296,6 +296,19 @@
       background: linear-gradient(135deg, #25d366, #128c7e);
     }
 
+    /* Bot de Alertas button */
+    .btn-bot {
+      --btn-glow: rgba(245, 158, 11, 0.4);
+    }
+
+    .btn-bot:hover {
+      box-shadow: 0 8px 40px var(--btn-glow), 0 0 0 1px rgba(245, 158, 11, 0.3);
+    }
+
+    .btn-bot .icon-wrap {
+      background: linear-gradient(135deg, #7c3aed, #f59e0b);
+    }
+
     /* Icon wrap */
     .icon-wrap {
       width: 44px;
@@ -574,6 +587,27 @@
             <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>
           <span class="badge">Entrar</span>
+        </a>
+
+        <!-- Bot de Alertas -->
+        <a id="link-bot" href="https://t.me/alertas_andre_bot" target="_blank" rel="noopener noreferrer"
+          class="link-btn btn-bot" aria-label="Acessar o Bot de Alertas no Telegram">
+          <div class="icon-wrap">
+            <!-- Bot icon -->
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path
+                d="M12 2a2 2 0 0 1 2 2v1h3a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V8a3 3 0 0 1 3-3h3V4a2 2 0 0 1 2-2zm0 2v1h-2V4h2zm-5 5v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm2 2h2v2H9v-2zm6 0h2v2h-2v-2zm-4 4h2v2h-2v-2z" />
+            </svg>
+          </div>
+          <div class="btn-text">
+            <span class="btn-label">🤖 Bot de Alertas</span>
+            <span class="btn-sublabel">Receba ofertas direto no seu Telegram ⚡</span>
+          </div>
+          <svg class="btn-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+          <span class="badge">Usar Bot</span>
         </a>
 
       </nav>
