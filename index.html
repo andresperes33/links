@@ -299,6 +299,19 @@
       background: linear-gradient(135deg, #3b82f6, #06b6d4);
     }
 
+    /* Promos button */
+    .btn-promos {
+      --btn-glow: rgba(249, 115, 22, 0.4);
+    }
+
+    .btn-promos:hover {
+      box-shadow: 0 8px 40px var(--btn-glow), 0 0 0 1px rgba(249, 115, 22, 0.3);
+    }
+
+    .btn-promos .icon-wrap {
+      background: linear-gradient(135deg, #f97316, #ef4444);
+    }
+
     /* Telegram button */
     .btn-telegram {
       --btn-glow: rgba(6, 182, 212, 0.4);
@@ -576,6 +589,26 @@
             <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>
           <span class="badge">Acesse</span>
+        </a>
+
+        <!-- Ofertas ao Vivo -->
+        <a id="link-promos" href="https://promos.andreindica.com.br/" target="_blank" rel="noopener noreferrer"
+          class="link-btn btn-promos" aria-label="Acessar Ofertas ao Vivo">
+          <div class="icon-wrap">
+            <!-- Flame icon -->
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
+            </svg>
+          </div>
+          <div class="btn-text">
+            <span class="btn-label">🔥 Ofertas ao Vivo</span>
+            <span class="btn-sublabel">As melhores promos do dia reunidas 🚀</span>
+          </div>
+          <svg class="btn-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+          <span class="badge">Conferir</span>
         </a>
 
         <!-- WhatsApp Ofertas -->
