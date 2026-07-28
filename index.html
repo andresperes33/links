@@ -194,11 +194,12 @@
       letter-spacing: -0.5px;
       text-align: center;
       margin-bottom: 10px;
-      min-height: 3.6rem;
-      display: inline-flex;
+      height: 3.6rem;
+      display: flex;
       align-items: center;
       justify-content: center;
       gap: 2px;
+      white-space: nowrap;
     }
 
     .profile-name .name-text {
@@ -336,6 +337,45 @@
 
     .btn-bot .icon-wrap {
       background: linear-gradient(135deg, #7c3aed, #f59e0b);
+    }
+
+    /* Site button */
+    .btn-site {
+      --btn-glow: rgba(16, 185, 129, 0.4);
+    }
+
+    .btn-site:hover {
+      box-shadow: 0 8px 40px var(--btn-glow), 0 0 0 1px rgba(16, 185, 129, 0.3);
+    }
+
+    .btn-site .icon-wrap {
+      background: linear-gradient(135deg, #059669, #10b981);
+    }
+
+    /* System button */
+    .btn-system {
+      --btn-glow: rgba(99, 102, 241, 0.4);
+    }
+
+    .btn-system:hover {
+      box-shadow: 0 8px 40px var(--btn-glow), 0 0 0 1px rgba(99, 102, 241, 0.3);
+    }
+
+    .btn-system .icon-wrap {
+      background: linear-gradient(135deg, #4f46e5, #818cf8);
+    }
+
+    /* Automation button */
+    .btn-automation {
+      --btn-glow: rgba(249, 115, 22, 0.4);
+    }
+
+    .btn-automation:hover {
+      box-shadow: 0 8px 40px var(--btn-glow), 0 0 0 1px rgba(249, 115, 22, 0.3);
+    }
+
+    .btn-automation .icon-wrap {
+      background: linear-gradient(135deg, #ea580c, #f97316);
     }
 
     /* Icon wrap */
@@ -556,6 +596,74 @@
       <!-- Botões de link -->
       <nav class="links-list" aria-label="Links de André da Silva Peres">
 
+        <!-- Site -->
+        <a id="link-site" href="https://wa.me/5538999821883?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20criar%20um%20site.%20Podemos%20conversar%3F" target="_blank"
+          rel="noopener noreferrer" class="link-btn btn-site"
+          aria-label="Solicitar criação de site">
+          <div class="icon-wrap">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+          </div>
+          <div class="btn-text">
+            <span class="btn-label">🌐 Criar um Site</span>
+            <span class="btn-sublabel">Landing page, institucional ou blog 💻</span>
+          </div>
+          <svg class="btn-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+          <span class="badge">WhatsApp</span>
+        </a>
+
+        <!-- Sistema -->
+        <a id="link-system" href="https://wa.me/5538999821883?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20criar%20um%20sistema.%20Podemos%20conversar%3F" target="_blank"
+          rel="noopener noreferrer" class="link-btn btn-system"
+          aria-label="Solicitar criação de sistema">
+          <div class="icon-wrap">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+            </svg>
+          </div>
+          <div class="btn-text">
+            <span class="btn-label">⚙️ Criar um Sistema</span>
+            <span class="btn-sublabel">Sob medida para seu negócio 🏢</span>
+          </div>
+          <svg class="btn-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+          <span class="badge">WhatsApp</span>
+        </a>
+
+        <!-- Automação -->
+        <a id="link-automation" href="https://wa.me/5538999821883?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20uma%20automa%C3%A7%C3%A3o.%20Podemos%20conversar%3F" target="_blank"
+          rel="noopener noreferrer" class="link-btn btn-automation"
+          aria-label="Solicitar automação">
+          <div class="icon-wrap">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+          </div>
+          <div class="btn-text">
+            <span class="btn-label">🤖 Criar Automação</span>
+            <span class="btn-sublabel">Automatize tarefas e otimize seu tempo ⚡</span>
+          </div>
+          <svg class="btn-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+          <span class="badge">WhatsApp</span>
+        </a>
+
+        <div class="divider" style="margin-top: 8px; margin-bottom: 8px;"></div>
+
         <!-- Telegram Ofertas -->
         <a id="link-telegram" href="https://t.me/AlertaTechBrasil" target="_blank" rel="noopener noreferrer"
           class="link-btn btn-telegram" aria-label="Entrar no grupo de ofertas do Telegram">
@@ -647,10 +755,10 @@
       ];
       const el = document.getElementById('typed-name');
 
-      const TYPE_SPEED = 130;  // ms por letra ao digitar
-      const DELETE_SPEED = 55;   // ms por letra ao apagar
-      const PAUSE_AFTER = 1800; // ms de pausa após digitar tudo
-      const PAUSE_BEFORE = 400;  // ms de pausa antes de começar o próximo
+      const TYPE_SPEED = 130;
+      const DELETE_SPEED = 55;
+      const PAUSE_AFTER = 1800;
+      const PAUSE_BEFORE = 400;
 
       let textIndex = 0;
       let charIndex = 0;
@@ -660,24 +768,20 @@
         const current = texts[textIndex];
 
         if (!deleting) {
-          // Digitando
           charIndex++;
           el.textContent = current.slice(0, charIndex);
 
           if (charIndex === current.length) {
-            // Terminou de digitar — pausa antes de apagar
             deleting = true;
             setTimeout(tick, PAUSE_AFTER);
             return;
           }
           setTimeout(tick, TYPE_SPEED);
         } else {
-          // Apagando
           charIndex--;
           el.textContent = current.slice(0, charIndex);
 
           if (charIndex === 0) {
-            // Terminou de apagar — passa para o próximo texto
             deleting = false;
             textIndex = (textIndex + 1) % texts.length;
             setTimeout(tick, PAUSE_BEFORE);
@@ -687,10 +791,10 @@
         }
       }
 
-      // Aguarda a animação de entrada do card antes de começar
       setTimeout(tick, 700);
     })();
   </script>
+
 </body>
 
 </html>
