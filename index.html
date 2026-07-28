@@ -7,6 +7,16 @@
   <title>André da Silva Peres | Links</title>
   <meta name="description"
     content="Acesse os produtos e canais de André da Silva Peres — site oficial e grupo no Telegram." />
+  <meta property="og:title" content="André da Silva Peres | Links" />
+  <meta property="og:description"
+    content="Acesse os produtos e canais de André da Silva Peres — site oficial e grupo no Telegram." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://links.andreindica.com.br" />
+  <meta property="og:image" content="https://links.andreindica.com.br/media/andre.png" />
+  <meta property="og:image:width" content="512" />
+  <meta property="og:image:height" content="512" />
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%238b0000'/%3E%3Cstop offset='100%25' stop-color='%23ff1e1e'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='20' fill='url(%23g)'/%3E%3Ctext x='50' y='68' font-family='Arial' font-size='55' font-weight='bold' fill='white' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
@@ -30,7 +40,7 @@
       --accent2: #06b6d4;
       --accent3: #f59e0b;
       --text-primary: #f1f5f9;
-      --text-secondary: #94a3b8;
+      --text-secondary: #cbd5e1;
       --glow1: rgba(124, 58, 237, 0.35);
       --glow2: rgba(6, 182, 212, 0.25);
     }
@@ -59,6 +69,7 @@
       filter: blur(90px);
       opacity: 0.45;
       animation: floatBlob 14s ease-in-out infinite alternate;
+      will-change: transform;
     }
 
     .blob-1 {
@@ -183,8 +194,10 @@
       letter-spacing: -0.5px;
       text-align: center;
       margin-bottom: 10px;
+      min-height: 3.6rem;
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 2px;
     }
 
@@ -286,32 +299,6 @@
       border-color: var(--border-hover);
     }
 
-    /* Blog button */
-    .btn-blog {
-      --btn-glow: rgba(56, 189, 248, 0.4);
-    }
-
-    .btn-blog:hover {
-      box-shadow: 0 8px 40px var(--btn-glow), 0 0 0 1px rgba(56, 189, 248, 0.3);
-    }
-
-    .btn-blog .icon-wrap {
-      background: linear-gradient(135deg, #3b82f6, #06b6d4);
-    }
-
-    /* Promos button */
-    .btn-promos {
-      --btn-glow: rgba(249, 115, 22, 0.4);
-    }
-
-    .btn-promos:hover {
-      box-shadow: 0 8px 40px var(--btn-glow), 0 0 0 1px rgba(249, 115, 22, 0.3);
-    }
-
-    .btn-promos .icon-wrap {
-      background: linear-gradient(135deg, #f97316, #ef4444);
-    }
-
     /* Telegram button */
     .btn-telegram {
       --btn-glow: rgba(6, 182, 212, 0.4);
@@ -325,17 +312,17 @@
       background: linear-gradient(135deg, #0088cc, #06b6d4);
     }
 
-    /* WhatsApp button */
-    .btn-whatsapp {
-      --btn-glow: rgba(34, 197, 94, 0.4);
+    /* Hostinger button */
+    .btn-hostinger {
+      --btn-glow: rgba(124, 58, 237, 0.4);
     }
 
-    .btn-whatsapp:hover {
-      box-shadow: 0 8px 40px var(--btn-glow), 0 0 0 1px rgba(34, 197, 94, 0.3);
+    .btn-hostinger:hover {
+      box-shadow: 0 8px 40px var(--btn-glow), 0 0 0 1px rgba(124, 58, 237, 0.3);
     }
 
-    .btn-whatsapp .icon-wrap {
-      background: linear-gradient(135deg, #25d366, #128c7e);
+    .btn-hostinger .icon-wrap {
+      background: linear-gradient(135deg, #7c3aed, #a855f7);
     }
 
     /* Bot de Alertas button */
@@ -569,69 +556,6 @@
       <!-- Botões de link -->
       <nav class="links-list" aria-label="Links de André da Silva Peres">
 
-        <!-- Blog de Review -->
-        <a id="link-blog" href="https://www.andreindica.com.br" target="_blank" rel="noopener noreferrer"
-          class="link-btn btn-blog" aria-label="Acessar o Blog André Indica">
-          <div class="icon-wrap">
-            <!-- Globe icon -->
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="2" y1="12" x2="22" y2="12"></line>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-            </svg>
-          </div>
-          <div class="btn-text">
-            <span class="btn-label">🌐 Blog de Review</span>
-            <span class="btn-sublabel">Acesse meu site completo: andreindica.com.br 💻</span>
-          </div>
-          <svg class="btn-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
-            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M5 12h14M12 5l7 7-7 7" />
-          </svg>
-          <span class="badge">Acesse</span>
-        </a>
-
-        <!-- Ofertas ao Vivo -->
-        <a id="link-promos" href="https://promos.andreindica.com.br/" target="_blank" rel="noopener noreferrer"
-          class="link-btn btn-promos" aria-label="Acessar Ofertas ao Vivo">
-          <div class="icon-wrap">
-            <!-- Flame icon -->
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
-            </svg>
-          </div>
-          <div class="btn-text">
-            <span class="btn-label">🔥 Ofertas ao Vivo</span>
-            <span class="btn-sublabel">As melhores promos do dia reunidas 🚀</span>
-          </div>
-          <svg class="btn-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
-            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M5 12h14M12 5l7 7-7 7" />
-          </svg>
-          <span class="badge">Conferir</span>
-        </a>
-
-        <!-- WhatsApp Ofertas -->
-        <a id="link-whatsapp" href="https://chat.whatsapp.com/Jxjt68Mfr9J4tx1vIS82DD" target="_blank"
-          rel="noopener noreferrer" class="link-btn btn-whatsapp" aria-label="Entrar no grupo de ofertas do WhatsApp">
-          <div class="icon-wrap">
-            <!-- WhatsApp icon -->
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-            </svg>
-          </div>
-          <div class="btn-text">
-            <span class="btn-label">✅ Alerta Tech Brasil (WhatsApp)</span>
-            <span class="btn-sublabel">Promoções automáticas no WhatsApp 🔥</span>
-          </div>
-          <svg class="btn-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
-            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M5 12h14M12 5l7 7-7 7" />
-          </svg>
-          <span class="badge">Entrar</span>
-        </a>
-
         <!-- Telegram Ofertas -->
         <a id="link-telegram" href="https://t.me/AlertaTechBrasil" target="_blank" rel="noopener noreferrer"
           class="link-btn btn-telegram" aria-label="Entrar no grupo de ofertas do Telegram">
@@ -672,6 +596,31 @@
             <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>
           <span class="badge">Usar Bot</span>
+        </a>
+
+        <!-- Hospedagem Hostinger -->
+        <a id="link-hostinger" href="https://www.hostinger.com/br?REFERRALCODE=andrecode" target="_blank"
+          rel="noopener noreferrer" class="link-btn btn-hostinger"
+          aria-label="Hospedagem de sites com Hostinger">
+          <div class="icon-wrap">
+            <!-- Server icon -->
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+              <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+              <line x1="6" y1="6" x2="6.01" y2="6"></line>
+              <line x1="6" y1="18" x2="6.01" y2="18"></line>
+            </svg>
+          </div>
+          <div class="btn-text">
+            <span class="btn-label">🚀 Hospedagem Hostinger</span>
+            <span class="btn-sublabel">Ganhe até 70% OFF + domínio grátis 🎯</span>
+          </div>
+          <svg class="btn-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+          <span class="badge">Oferta</span>
         </a>
 
       </nav>
